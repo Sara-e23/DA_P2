@@ -15,7 +15,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.clasetrabajo.data.database.AppDatabase
 import com.example.clasetrabajo.data.database.DatabaseProvider
-import com.example.clasetrabajo.ui.screens.AMScreen
 import com.example.clasetrabajo.ui.screens.AccountsScreen
 import com.example.clasetrabajo.ui.screens.BiometricScreen
 import com.example.clasetrabajo.ui.screens.Calendar
@@ -34,8 +33,6 @@ class MainActivity : FragmentActivity() {
     lateinit var database: AppDatabase
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //to program in the entire screen
-        //enableEdgeToEdge()
 
         try{
             database = DatabaseProvider.getDatabase(this)
@@ -68,7 +65,6 @@ fun SetupNavGraph(navController: NavHostController){
         composable("mainMenu"){ MainMenuScreen(navController) }
         composable("homeScreen") {HomeScreen(navController) }
         composable("testScreen") {TestScreen(navController) }
-        composable("amScreen") { AMScreen(navController) }
         composable("componentsScreen") { ComponentsScreen(navController) }
         composable("loginScreen") { LoginScreen(navController) }
         composable("accountsScreen"){ AccountsScreen(navController) }
@@ -80,7 +76,7 @@ fun SetupNavGraph(navController: NavHostController){
         val id = backStackEntry.arguments?.getString("id")?.toIntOrNull() ?: -1
         ManageAccountScreen(
             navController = navController,
-            accountId = id // <-- aquí es importante nombrarlo
+            accountId = id //nombrarlo
         )
     }
         composable("favAcScreen"){ FavoriteAccountsScreen(navController) }
