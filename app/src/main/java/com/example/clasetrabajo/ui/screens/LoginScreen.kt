@@ -54,7 +54,6 @@ fun LoginScreen(navController: NavHostController){
 }
 @Composable
 fun LoginForm(navController: NavController, ViewModel: UserViewModel = viewModel()){
-    //for Toast
     val context = LocalContext.current
     Card(
         colors = CardDefaults.cardColors(
@@ -89,9 +88,9 @@ fun LoginForm(navController: NavController, ViewModel: UserViewModel = viewModel
                     unfocusedBorderColor = MaterialTheme.colorScheme.primary,
                     unfocusedContainerColor = Color.Transparent,
                     unfocusedTextColor = Color.Black,
-                    focusedTextColor = Color.White,
+                    focusedTextColor = Color.Black,
                     unfocusedLabelColor = Color.Black,
-                    focusedLabelColor = Color.White
+                    focusedLabelColor = Color.Black
                 )
             )
             OutlinedTextField(
@@ -106,9 +105,9 @@ fun LoginForm(navController: NavController, ViewModel: UserViewModel = viewModel
                     unfocusedBorderColor = MaterialTheme.colorScheme.primary,
                     unfocusedContainerColor = Color.Transparent,
                     unfocusedTextColor = Color.Black,
-                    focusedTextColor = Color.White,
+                    focusedTextColor = Color.Black,
                     unfocusedLabelColor = Color.Black,
-                    focusedLabelColor = Color.White
+                    focusedLabelColor = Color.Black
                 )
             )
             FilledTonalButton(
